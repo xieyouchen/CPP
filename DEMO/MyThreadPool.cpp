@@ -14,7 +14,6 @@ public:
             workers.emplace_back([this] {
                 while (true) {
                     std::function<void()> task;
-
                     // 获取任务
                     {
                         std::unique_lock<std::mutex> lock(queueMutex);
