@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(CPP VERSION 0.1.0 LANGUAGES C CXX)
 
-set(CMAKE_CXX_STANDARD 17)  # 设置 C++ 标准为 C++17
+set(CMAKE_CXX_STANDARD 20)  # 设置 C++ 标准为 C++20
 set(CMAKE_CXX_STANDARD_REQUIRED ON)  # 确保使用指定的标准
 
 add_executable(Singleton DesignMode/Singleton.cpp)
@@ -27,6 +27,8 @@ add_executable(TimerManager TimerManager.cpp)
 add_executable(SharedPtr SharedPtr.cpp)
 add_executable(SharedPtr_WeakPtr SharedPtr_WeakPtr.cpp)
 
+add_executable(CPP20_concept CPP20_concept.cpp)
+
 ############## C ##############
 
 add_executable(C_Pointer C/Pointer.cpp)
@@ -35,6 +37,7 @@ add_executable(C_VirtualTable C/VirtualTable.cpp)
 ########## DEMO 
 add_executable(DEMO_MyThreadPool DEMO/MyThreadPool.cpp)
 target_link_libraries(DEMO_MyThreadPool pthread) # ThreadPool 专属，因为调用了 Linux 的 POSIX 底层API
+
 
 
 
